@@ -11,8 +11,10 @@ Note: Do not upload `api.yml` to public repositories for security reasons.
 To use the `github_user_info` function, follow the example below:
 
 ```python
-user_obj = github_user_info('api.yml')
+from gitapi_pkg import gitapi
 
-# Print some values
+user_obj = gitapi.github_user_info('./gitapi_pkg/api.yml')
+
+# print some values
 print('Username: ' + user_obj['login'])
 print('Name: ' + user_obj['name'])

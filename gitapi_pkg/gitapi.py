@@ -31,6 +31,13 @@ def github_user_info(token_file_name:str) -> dict:
         with open(file_path, 'r') as file:
             return yaml.safe_load(file)
 
+    
+    # if token_file_name is not str:
+    #     raise ValueError(f'token_file_name must be str, got {token_file_name}')
+    if not isinstance(token_file_name, str):
+        raise ValueError(f'token_file_name must be str, got {type(token_file_name).__name__}')
+
+    
     #Load the token from the YAML file
     config = load_config(f'{token_file_name}')
     token = config['github']['token']

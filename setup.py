@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='githubAPI',
+    name='gitapi_pkg',
     version='0.1.1',
     author='Kam',
     packages=['githubAPI'],
